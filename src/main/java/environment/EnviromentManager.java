@@ -14,7 +14,7 @@ public class EnviromentManager {
     public static void initWebDriver() throws MalformedURLException {
         String whereDriver = "local";
         String p1 = "webdriver.chrome.driver";
-        String p2 = "C:\\Users\\donzella.TXTGROUP\\OneDrive - TXT e-solutions S.p.A\\Desktop\\Selenium\\chromedriver.exe";
+        String p2 = "src/main/java/Driver/chromedriver.exe";
         System.setProperty(p1, p2);
         URL url = new URL("http://localhost:4444/wd/hub");
     //    URL url = new URL("http://jenkins-m-cs-01.dccs.cartasi.local:4444/wd/hub");
