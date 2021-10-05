@@ -13,5 +13,4 @@ public class RunEnvironment {
     static void setWebDriver(WebDriver webDriver) {
         RunEnvironment.webDriver = webDriver;
     }
-
 }

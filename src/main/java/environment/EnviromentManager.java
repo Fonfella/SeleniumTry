@@ -27,7 +27,6 @@ public class EnviromentManager {
             RemoteWebDriver driver = new RemoteWebDriver(url , dc);
             RunEnvironment.setWebDriver(driver);
         }
-
     }
 
     public static void shutDownDriver() {
