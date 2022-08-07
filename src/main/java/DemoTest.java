@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
@@ -17,7 +18,7 @@ import static org.junit.Assert.assertEquals;
 public class DemoTest {
 
     @Before
-    public void startBrowser() throws MalformedURLException {
+    public void startBrowser() throws IOException {
         EnviromentManager.initWebDriver();
     }
 

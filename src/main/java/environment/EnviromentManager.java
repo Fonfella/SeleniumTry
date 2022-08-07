@@ -5,16 +5,24 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Properties;
 
 public class EnviromentManager {
 
-    public static void initWebDriver() throws MalformedURLException {
-        String whereDriver = "local";
-        String p1 = "webdriver.chrome.driver";
-        String p2 = "src/main/java/Driver/chromedriver.exe";
-        System.setProperty(p1, p2);
+    public static void initWebDriver() throws IOException {
+        Properties p = new Properties();
+        p.load(new FileInputStream("src/main/java/Driver/app.properties"));
+        String whereDriver = p.getProperty("whereDriver");
+
+        String chromeDriver = p.getProperty("chromeDriver");
+        String driverExecute = p.getProperty("driverExecute");
+        System.setProperty(chromeDriver, driverExecute);
         URL url = new URL("http://localhost:4444/wd/hub");
     //    URL url = new URL("http://jenkins-m-cs-01.dccs.cartasi.local:4444/wd/hub");
 
